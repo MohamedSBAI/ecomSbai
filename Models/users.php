@@ -16,6 +16,11 @@ function countUsers(){
     $count = $pdo->query("SELECT count(*) FROM users")->fetchColumn();
     return $count;
 }
+function countCat(){
+    $pdo = DbConnection();
+    $count = $pdo->query("SELECT count(*) FROM category")->fetchColumn();
+    return $count;
+}
 
 function getUser($id){
     $pdo = DbConnection();
@@ -30,10 +35,15 @@ function addUser($name, $email, $password, $role , $image){
     return $stmt->execute([$name,$email,$password,$role,$image,null]);
 }
 
+// function editUser($id){
+//     $pdo = DbConnection();
+//     return $pdo -> query("SELECT users.id, users.name, users.email, users.picture, DATE_FORMAT(users.created_at, '%d-%m-%Y') as created_at, role.name AS role_name FROM users JOIN role ON users.role_id =
+//     role.id WHERE users.id = '$id'")->fetchAll(PDO::FETCH_OBJ);
+// }
 
-function updateUser($id, $name, $email, $password, $role_id){
+function updateUser($id, $name, $email, $password, $role_id, $image){
     $pdo = DbConnection();
-    $pdo -> exec("UPDATE users SET name = '$name', email = '$email', password = <PASSWORD>', role_id = '$role_id' WHERE id = '$id'");
+    return $pdo -> exec("UPDATE users SET name = '$name', email = '$email', password = '$password', role_id = '$role_id' , picture = '$image' WHERE id = '$id'");
 }
 
 function deleteUser($id){

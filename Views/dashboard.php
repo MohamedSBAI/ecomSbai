@@ -10,9 +10,10 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
+                <h3><?php $countUsers=countCat();
+                ?><?php echo $countUsers; ?></h3>
 
-                <p>New Orders</p>
+                <p>CATEGORIE</p>
               </div>
               <div class="icon">
                 <i class="fa fa-th" aria-hidden="true"></i>

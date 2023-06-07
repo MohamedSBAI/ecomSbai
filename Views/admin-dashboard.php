@@ -203,63 +203,63 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <i class="fas fa-angle-left right"></i>
                   </p>
                 </a>
-                <ul class="nav nav-treeview">
+                <ul class="nav nav-treeview ml-2">
                   <li class="nav-item">
                     <a href="action.php?action=listUsers" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Liste UITILESATEURS</p>
+                      <i class="fa fa-list nav-icon"></i>
+                      <p>LISTE UITILESATEURS</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="pages/UI/icons.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Icons</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-tree"></i>
-                  <p>
-                    UI Elements
-                    <i class="fas fa-angle-left right"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="pages/UI/general.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>General</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/UI/icons.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Icons</p>
+                    <a href="action.php?action=addUserPage" class="nav-link">
+                      <i class="fa fa-plus nav-icon"></i>
+                      <p>AJOUTER UTILISATEUR</p>
                     </a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-tree"></i>
+                  <i class="nav-icon fas fa-archive"></i>
                   <p>
-                    UI Elements
+                    PRODUIT
                     <i class="fas fa-angle-left right"></i>
                   </p>
                 </a>
-                <ul class="nav nav-treeview">
+                <ul class="nav nav-treeview ml-2">
+                  <li class="nav-item">
+                    <a href="product_action.php?action=listProduct" class="nav-link">
+                      <i class="fa fa-list nav-icon"></i>
+                      <p>LISTE PRODUIT</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="product_action.php?action=addProductPage" class="nav-link">
+                      <i class="fa fa-plus nav-icon"></i>
+                      <p>AJOUTER PRODUIT</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                  CATEGORIE
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview ml-2">
                   <li class="nav-item">
                     <a href="pages/UI/general.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>General</p>
+                      <i class="fa fa-list nav-icon"></i>
+                      <p>LISTE CATEGORIE</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="pages/UI/icons.html" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Icons</p>
+                      <i class="fa fa-plus  nav-icon"></i>
+                      <p>AJOUTER CATEGORIE</p>
                     </a>
                   </li>
                 </ul>

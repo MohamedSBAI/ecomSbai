@@ -48,12 +48,8 @@
             case 'editUserPage':
                 editUserAction();
                 break;
-            case '':
-                
-                require_once('../Views/Utilisateur/edit_user.php');
-                break;
             case 'editUser':
-                updateUserAction()();
+                updateUserAction();
                 break;  
             }
     }else{

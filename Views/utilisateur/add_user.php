@@ -35,7 +35,7 @@
           <div class="col-sm-10">
             <select class="form-control" id="role" name="role">
               <option value="1">Admin</option>
-              <option value="2">Client</option>
+              <option value="2">User</option>
             </select>
           </div>
         </div>

@@ -49,27 +49,17 @@ function addUserAction(){
     }
 }
 
-function destroyUserAction(){
-    $id = $_GET['id'];
-    $deleteUser = deleteUser($id);
-    if($deleteUser == true){
-    header('Location:../Views/action.php?action=listUsers');
-    }else{
-        echo "Error";
-    }
-}
-
 function editUserAction(){
     $id = $_GET['id'];
-    $userData = editUser($id);
-    require_once('../Views/Utilisateur/edit_utilisateur.php');
+    $userData = getUser($id);
+    require_once('../Views/Utilisateur/edit_user.php');
 }
 
 function updateUserAction(){
-    $id = $_GET['id'];
+    $id = $_POST['id'];
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = $_POST['new_password'];
     $role = $_POST['role'];
     $image = $_FILES['picture']['name'];
     $upload_path ='../assets/img/user/'.$image;
@@ -81,9 +71,20 @@ function updateUserAction(){
     }else{
         echo "Error";
     }
+}
+function destroyUserAction(){
+    $id = $_GET['id'];
+    $deleteUser = deleteUser($id);
+    if($deleteUser == true){
+    header('Location:../Views/action.php?action=listUsers');
+    }else{
+        echo "Error";
+    }
+}
+
 
         
-}
+
 
 
 
