@@ -1,16 +1,16 @@
 <?php 
-    require_once '../Controllers/product_controller.php';
+    require_once '../Controllers/category_controller.php';
     //routeur
     session_start();
     if(isset($_GET['action'])){
         switch($_GET['action']){
-            case 'listProduct':
-                listProductssAction();
+            case 'listCat':
+                listCatAction();
                 break;
-            case 'addProduct':
-                addProductAction();
+            case 'addCat':
+                addCatAction();
                 break;
-            case 'addProductPage':
+            case 'addCatPage':
                 getcategorysAction();
                 break;
             case 'destroyProduct':
@@ -25,7 +25,7 @@
             case 'editProduct':
                 updateProductAction();
                 break;  
-            }
+                }
     }else{
         
     }

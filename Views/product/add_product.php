@@ -24,20 +24,14 @@
           <div class="col-sm-10">
             <input type="text" class="form-control" id="name" name="name" placeholder="Entrez produit nom">
           </div>
-        </div>
-        <div class="form-group row">
           <label for="email" class="col-sm-2 col-form-label">Stock:</label>
           <div class="col-sm-10">
             <input type="number" class="form-control" id="stock" name="stock" placeholder="">
           </div>
-        </div>
-        <div class="form-group row">
           <label for="email" class="col-sm-2 col-form-label">Prix:</label>
           <div class="col-sm-10">
             <input type="number" class="form-control" id="price" name="price" placeholder="">
           </div>
-        </div>
-        <div class="form-group row">
           <label for="role" class="col-sm-2 col-form-label">Catégorie:</label>
           <div class="col-sm-10">
              <select class="form-control" id="cat" name="cat">
@@ -47,28 +41,22 @@
               <?php endforeach;?>
             </select>
           </div>
-        </div>
-        <div class="form-group row">
           <label for="role" class="col-sm-2 col-form-label">Slug:</label>
           <div class="col-sm-10">
           <input type="text" class="form-control" id="slug" name="slug" >
           </div>
-        </div>
-        <div class="form-group row">
           <label for="role" class="col-sm-2 col-form-label">Description:</label>
           <div class="col-sm-10">
           <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
           </div>
+         <label for="picture" class="col-sm-2 col-form-label">Photo:</label>
+          <div class="col-sm-10">
+          <div class="custom-file">
+          <input type="file" class="custom-file-input" id="picture"  name="picture" onchange="preview()">
+          <label class="custom-file-label" for="picture">Choose file</label>
         </div>
-        <div class="form-group row">
-  <label for="picture" class="col-sm-2 col-form-label">Photo:</label>
-  <div class="col-sm-10">
-    <div class="custom-file">
-      <input type="file" class="custom-file-input" id="picture"  name="picture" onchange="preview()">
-      <label class="custom-file-label" for="picture">Choose file</label>
+      </div>
     </div>
-  </div>
-</div>
 
 <div class="form-group row">
   <div class="col-sm-2"></div>
