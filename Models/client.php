@@ -1,9 +1,9 @@
 <?php 
 include_once '../DataBase/db.php';
 
-function getcatigorys(){
+function loginClient($email,$password){
     $pdo = DbConnection();
-    return $pdo -> query("SELECT category.name,category.id FROM category")->fetchAll(PDO::FETCH_OBJ);
+    return $pdo -> query("SELECT * FROM client WHERE email = '$email' AND password = '$password' ")->fetchAll(PDO::FETCH_OBJ);
 }
 
 function listCat (){
@@ -17,10 +17,10 @@ function getCat($id){
 
 
 
-function addCat($name, $parent,$desc){
+function addClient($name, $email,$password){
     $pdo = DbConnection();
-    $stmt = $pdo->prepare('INSERT INTO category(name, description, parent, created_at) VALUES (?,?,?,?)');
-    return $stmt->execute([$name,$desc,$parent,null]);
+    $stmt = $pdo->prepare('INSERT INTO client(name, email, password) VALUES (?,?,?)');
+    return $stmt->execute([$name,$email,$password]);
 }
 
 

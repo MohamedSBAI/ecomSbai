@@ -35,6 +35,7 @@
           <label for="role" class="col-sm-2 col-form-label">Catégorie:</label>
           <div class="col-sm-10">
              <select class="form-control" id="cat" name="cat">
+             <option value="" disabled selected>Choose an option:</option>
             <?php  
             foreach($categorys as $category):?>
               <option value="<?=$category->id?>"><?=$category->name?></option>

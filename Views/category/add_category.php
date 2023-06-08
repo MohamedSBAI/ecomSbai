@@ -8,22 +8,23 @@
         <div class="form-group row">
           <label for="name" class="col-sm-2 col-form-label" plaseholser>Nom:</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="name" name="name" placeholder="Entrez produit nom">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Entrez catégorie nom">
+          </div>
+          <label for="role" class="col-sm-2 col-form-label">Description:</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
           </div>
           <label for="role" class="col-sm-2 col-form-label">Parent:</label>
           <div class="col-sm-10">
              <select class="form-control" id="parent" name="parent">
+             <option value="" disabled selected>Choose an option:</option>
             <?php  
             foreach($categorys as $category):?>
               <option value="<?=$category->name?>"><?=$category->name?></option>
               <?php endforeach;?>
             </select>
           </div>
-          <label for="role" class="col-sm-2 col-form-label">Description:</label>
-          <div class="col-sm-10">
-          <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
-          </div>
-      </div>
+        </div>
     </div> 
         <button type="submit" class="btn btn-primary mb-5">Ajouter</button>
       </form>

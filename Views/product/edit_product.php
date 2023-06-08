@@ -3,20 +3,6 @@
     Previous</a>';
     ob_start(); 
 ?>
-<style>
-  .square {
-    width: 150px;
-    height: 150px;
-    overflow: hidden;
-    border-radius: 50%;
-  }
-
-  .square img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-</style>
     <div class="container">
       <form action="product_action.php?action=editProduct" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="id" value="<?=$proData->id;?>">
@@ -39,7 +25,7 @@
           </div>
         </div>
         <div class="form-group row">
-          <label for="role" class="col-sm-2 col-form-label">Catégorie:</label>
+          <label for="cat" class="col-sm-2 col-form-label">Catégorie:</label>
           <div class="col-sm-10">
           <select class="form-control" id="cat" name="cat">
   <?php foreach($categorys as $category):?>
@@ -59,7 +45,7 @@
         <div class="form-group row">
           <label for="role" class="col-sm-2 col-form-label">Description:</label>
           <div class="col-sm-10">
-          <textarea class="form-control" value="<?=$proData->desc;?>" id="desc" name="desc" rows="3"></textarea>
+          <textarea class="form-control" id="desc" name="desc" rows="3"><?=$proData->desc;?></textarea>
           </div>
         </div>
         <div class="form-group row">

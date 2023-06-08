@@ -1,24 +1,32 @@
 <?php
-include_once '../Models/category.php';
+include_once '../Models/client.php';
 
 function listCatAction(){
     $categorys = listCat();
     require_once('../Views/category/list_category.php');
 }
-
-function getcategorysAction() {
-    $categorys=getcatigorys();
-    include_once('../views/category/add_category.php');
-}
-
-function addCatAction(){
-    $name = $_POST['name'];
-    $parent = $_POST['parent'];
-    $desc = $_POST['desc'];
-    $addCat = addCat($name, $parent,$desc);
+//
+function loginClientAction() {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $userData = loginClient($email, $password);
+if(!empty($userData)) {
+    return array('name' => $userData[0]->name);
     
-    if($addCat == true){
-        header('Location:../Views/category_action.php?action=listCat');
+} else {
+
+    return "Invalid email or password.";
+}
+}
+//
+function addClientAction(){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $addClint = addClient($name, $email,$password);
+    
+    if($addClint == true){
+        header('Location:signup.php');
     }else{
         echo "Error";
     }

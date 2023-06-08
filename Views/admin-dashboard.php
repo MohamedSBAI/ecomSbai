@@ -42,7 +42,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="../index.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -205,81 +205,98 @@
       </div>
 
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-                  <i class="nav-icon fas fa-users"></i>
-                  <p>
-                    UITILESATEURS
-                    <i class="fas fa-angle-left right"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview ml-2">
-                  <li class="nav-item">
-                    <a href="action.php?action=listUsers" class="nav-link">
-                      <i class="fa fa-list nav-icon"></i>
-                      <p>LISTE UITILESATEURS</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="action.php?action=addUserPage" class="nav-link">
-                      <i class="fa fa-plus nav-icon"></i>
-                      <p>AJOUTER UTILISATEUR</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-archive"></i>
-                  <p>
-                    PRODUIT
-                    <i class="fas fa-angle-left right"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview ml-2">
-                  <li class="nav-item">
-                    <a href="product_action.php?action=listProduct" class="nav-link">
-                      <i class="fa fa-list nav-icon"></i>
-                      <p>LISTE PRODUIT</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="product_action.php?action=addProductPage" class="nav-link">
-                      <i class="fa fa-plus nav-icon"></i>
-                      <p>AJOUTER PRODUIT</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-th"></i>
-                  <p>
-                  CATEGORIE
-                    <i class="fas fa-angle-left right"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview ml-2">
-                  <li class="nav-item">
-                    <a href="category_action.php?action=listCat" class="nav-link">
-                      <i class="fa fa-list nav-icon"></i>
-                      <p>LISTE CATEGORIE</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="pages/UI/icons.html" class="nav-link">
-                      <i class="fa fa-plus  nav-icon"></i>
-                      <p>AJOUTER CATEGORIE</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            
-        </ul>    
+<nav class="mt-2">
+  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+    <!-- Add icons to the links using the .nav-icon class
+         with font-awesome or any other icon font library -->
+    
+         <li class="nav-item menu-open">
+    <a href="#" class="nav-link active">
+      <i class="nav-icon fas fa-users"></i>
+      <p>
+        UITILESATEURS
+        <i class="fas fa-angle-left right"></i>
+      </p>
+    </a>
+    <ul class="nav nav-treeview ml-2">
+      <li class="nav-item">
+        <a href="action.php?action=listUsers" class="nav-link">
+          <i class="fa fa-list nav-icon"></i>
+          <p>LISTE UITILESATEURS</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="action.php?action=addUserPage" class="nav-link">
+          <i class="fa fa-plus nav-icon"></i>
+          <p>AJOUTER UTILISATEUR</p>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a href="#" class="nav-link">
+      <i class="nav-icon fas fa-archive"></i>
+      <p>
+        PRODUIT
+        <i class="fas fa-angle-left right"></i>
+      </p>
+    </a>
+    <ul class="nav nav-treeview ml-2">
+      <li class="nav-item">
+        <a href="product_action.php?action=listProduct" class="nav-link">
+          <i class="fa fa-list nav-icon"></i>
+          <p>LISTE PRODUIT</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="product_action.php?action=addProductPage" class="nav-link">
+          <i class="fa fa-plus nav-icon"></i>
+          <p>AJOUTER PRODUIT</p>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a href="#" class="nav-link">
+      <i class="nav-icon fas fa-th"></i>
+      <p>
+        CATEGORIE
+        <i class="fas fa-angle-left right"></i>
+      </p>
+    </a>
+    <ul class="nav nav-treeview ml-2">
+      <li class="nav-item">
+        <a href="category_action.php?action=listCat" class="nav-link">
+          <i class="fa fa-list nav-icon"></i>
+          <p>LISTE CATEGORIE</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="category_action.php?action=addCatPage" class="nav-link">
+          <i class="fa fa-plus nav-icon"></i>
+          <p>AJOUTER CATEGORIE</p>
+        </a>
+      </li>
+    </ul>
+  </li>
+  
+    
+  </ul>
+  
+  <!-- Logout link at bottom of sidebar -->
+  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+    <li class="nav-item">
+      <a href="../index.html" class="nav-link">
+        <i class="nav-icon fas fa-sign-out-alt"></i>
+        <p>
+          <?php session_destroy(); ?>
+          Logout
+        </p>
+      </a>
+    </li>
+  </ul>
+
+          
       </nav>
       <!-- /.sidebar-menu -->
     </div>
