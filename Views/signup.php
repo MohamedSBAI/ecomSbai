@@ -30,7 +30,7 @@
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-		<form action="client_action.php?action=login" method="post">
+		<form action="action.php?action=loginClient" method="post">
 			<h1>Sign in</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>

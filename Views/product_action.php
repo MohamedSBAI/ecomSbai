@@ -7,6 +7,9 @@
             case 'listProduct':
                 listProductssAction();
                 break;
+            case 'viewProduct':
+                viewProductAction();
+                break;
             case 'addProduct':
                 addProductAction();
                 break;

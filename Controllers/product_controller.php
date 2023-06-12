@@ -12,10 +12,10 @@ function listProductssAction(){
     require_once('../Views/product/list_products.php');
 }
 
-function viewUserAction(){
+function viewProductAction(){
     $id = $_GET['id'];
-    $user = getUser($id);
-    require_once('../Views/Utilisateur/view_utilisateur.php');
+    $products = getProduct($id);
+    require_once('../Views/product/show_product.php');
 }
 
 function dashboardAction() {

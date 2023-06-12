@@ -2,6 +2,7 @@
     require_once '../Controllers/client_controller.php';
     //routeur
     session_start();
+    $listcontrolle ="";
     if(isset($_GET['action'])){
         switch($_GET['action']){
             case 'login':
@@ -10,34 +11,25 @@
                     header("location:signup.php?alertMessage={$alertMessage}");
                 } else {
                     $data = loginClientAction();
-                    $_SESSION['user_name'] = $data['name'];
-                    // $_SESSION['user_img'] = $data['image'];
+                    $_SESSION['client_name'] = $data['name'];
+                    $_SESSION['client_img'] = $data['image'];
                     
-                    header("Location: ../index.html");
+                    header("Location: list_controll.php");
                     exit;
                 }
                 break;
-            case 'listCat':
-                listCatAction();
+            case 'listClient':
+                listClientAction();
                 break;
             case 'addClient':
                 addClientAction();
                 break;
-            case 'addCatPage':
-                getcategorysAction();
+            case 'destroyClinet':
+                destroyClientAction();
                 break;
-            case 'destroyCat':
-                destroyCatAction();
+            case 'deleteClientPage':
+                include_once('client/delete_client.php');
                 break;
-            case 'deletecatPage':
-                include_once('category/delete_category.php');
-                break;
-            case 'editCatPage':
-                editCatPageAction();
-                break;
-            case 'editCat':
-                updateCatAction();
-                break;  
                 }
     }else{
         

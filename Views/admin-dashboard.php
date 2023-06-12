@@ -1,3 +1,7 @@
+<?php @session_start();  if(isset($_SESSION['user_name'])): 
+$user_name = isset($_SESSION['user_name']) ? $_SESSION['user_name'] : null;
+$user_img = isset($_SESSION['user_img']) ? $_SESSION['user_img'] : null;
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -185,10 +189,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../assets/img/user/<?=$_SESSION['user_img'] ;?>" class="img-circle elevation-2" alt="User Image">
+          <img src="../assets/img/user/<?=$user_img?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="../Views/action.php?action=dashboard" class="d-block"><?=$_SESSION['user_name'] ;?></a>
+          <a href="../Views/action.php?action=dashboard" class="d-block"><?=$user_name;?></a>
         </div>
       </div>
 
@@ -229,6 +233,12 @@
         <a href="action.php?action=addUserPage" class="nav-link">
           <i class="fa fa-plus nav-icon"></i>
           <p>AJOUTER UTILISATEUR</p>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="client_action.php?action=listClient" class="nav-link">
+          <i class="fa fa-list nav-icon"></i>
+          <p>LISTE CLIENT</p>
         </a>
       </li>
     </ul>
@@ -286,10 +296,9 @@
   <!-- Logout link at bottom of sidebar -->
   <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
     <li class="nav-item">
-      <a href="../index.html" class="nav-link">
+      <a href="action.php?action=logout" class="nav-link">
         <i class="nav-icon fas fa-sign-out-alt"></i>
         <p>
-          <?php session_destroy(); ?>
           Logout
         </p>
       </a>
@@ -384,3 +393,4 @@
 <script src="../dist/js/pages/dashboard.js"></script>
 </body>
 </html>
+<?php endif;?>

@@ -6,15 +6,10 @@ function loginClient($email,$password){
     return $pdo -> query("SELECT * FROM client WHERE email = '$email' AND password = '$password' ")->fetchAll(PDO::FETCH_OBJ);
 }
 
-function listCat (){
+function listClient (){
     $pdo = DbConnection();
-    return $pdo -> query("SELECT id, name,description,parent, DATE_FORMAT(created_at, '%d-%m-%Y') as created_at FROM category  ORDER BY id" )->fetchAll(PDO::FETCH_OBJ);
+    return $pdo -> query("SELECT id, name,email FROM client  ORDER BY id" )->fetchAll(PDO::FETCH_OBJ);
 }
-function getCat($id){
-    $pdo = DbConnection();
-    return $pdo -> query("SELECT id, name,description,parent  FROM category WHERE id= $id " )->fetch(PDO::FETCH_OBJ);
-}
-
 
 
 function addClient($name, $email,$password){
@@ -23,15 +18,8 @@ function addClient($name, $email,$password){
     return $stmt->execute([$name,$email,$password]);
 }
 
-
-function editCat($id,$name,$parent,$desc){
+function deleteClient($id){
     $pdo = DbConnection();
-    $stmt = $pdo->prepare('UPDATE category SET name = ?, description = ?, parent = ? WHERE id = ?');
-    return $stmt->execute([$name,$desc,$parent,$id]);
-}
-
-function deleteCat($id){
-    $pdo = DbConnection();
-    $stmt = $pdo->prepare('DELETE FROM category WHERE id = ?');
+    $stmt = $pdo->prepare('DELETE FROM client WHERE id = ?');
     return $stmt -> execute([$id]);
 }   

@@ -2,11 +2,12 @@
 include_once '../Models/users.php';
 
 // Define the loginAction function to confirmation login
-function loginAction() {
+function loginAction(){
     $email = $_POST['email'];
     $password = $_POST['password'];
     $userData = login($email, $password);
 if(!empty($userData) && $userData[0]->role_id == 1) {
+
     return array('name' => $userData[0]->name,'image' =>$userData[0]->picture);
     
 } else {

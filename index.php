@@ -1,4 +1,11 @@
-<!doctype html>
+<?php session_start();
+if(isset($_SESSION['client_name'])) {
+    $client_name = $_SESSION['client_name'];
+   // $client_img = $_SESSION['client_img'];
+    $client_img = 'assets/icon/user.png';
+    // do something with $client_name
+} ?>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 
 <head>
@@ -301,10 +308,19 @@
                                     <li class="header_search"><a href="#"><i class="icon-magnifier icons"></i></a></li>
                                     <li class="account_link"><a href="#"><i class="icon-user icons"></i></a>
                                         <ul class="dropdown_account_link">
-                                            <li><a href="Views/login.php?">Espac Admin</a></li>
+                                        <?php
+                                        
+                                         if(!isset($_SESSION['client_name'])){
+                                            
+                                               echo  ('<li><a href="Views/login.php?">Espac Admin</a></li>
                                             <li><a href="#">My Account</a></li>
                                             <li><a href="Views/signup.php">Login</a></li>
-                                            <li><a href="#">Contact</a></li>
+                                            <li><a href="#">Contact</a></li>');
+                                            }else{echo ('<li>  <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                                                  <a href="../Views/action.php?action=dashboard" class="d-block">'.$client_name.'</a>
+                                                </li>
+                                                <li><a href="views/action.php?action=logout">Logout</a></li>');} ?>
+                                           
                                         </ul>
                                     </li>
                                     <li><a href="#"><i class="icon-heart icons"></i></a> <span
@@ -350,7 +366,7 @@
                         <div class="col-lg-6 col-md-7">
                             <div class="slider_text">
                                 <span>Lookbook</span>
-                                <h1>fashion trend for autum girls with vibes</h1>
+                                <h1><?php echo $_SESSION['client_name'];?></h1>
                                 <p>We love seeing how our Aslam wearers like <br> to wear their Norda</p>
                                 <a class="btn btn-primary" href="shop.html">Explore Now</a>
                             </div>
